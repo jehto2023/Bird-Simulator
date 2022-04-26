@@ -88,14 +88,14 @@ class Play extends Phaser.Scene {
             this.gameOver = true;
         }, null, this);
 
-        this.timeLeft = this.add.text(borderUISize + borderPadding*42, borderUISize + borderPadding*2, "Time: " + Math.floor(this.clock.getRemainingSeconds()), scoreConfig); 
+        this.timeLeft = this.add.text(borderUISize + borderPadding*42, borderUISize + borderPadding*2, "Time Left: " + Math.floor(this.clock.getRemainingSeconds()), scoreConfig); 
     }
 
     update() {
         // check key input for restart / menu
 
         if(this.gameOver != true) {
-            this.timeLeft.text = 'Time: ' + this.clock.getRemainingSeconds().toFixed(0);
+            this.timeLeft.text = 'Time Left: ' + this.clock.getRemainingSeconds().toFixed(0);
 
         }
         
